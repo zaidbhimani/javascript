@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+     <div>Enter number<input id='demo1' type='text' value=''/></div>
+     <div><input id='but' type='button' value='click'></div>
+     <div id='result'></div>
+  
+  <script type="text/javascript">
+  	function myFunction(){
+  var number = document.getElementById('demo1').value;
+  // console.log(number)
+  switch(number){
+    case '1':
+      text = '1';
+      // alert("your number is 1");
+      break;
+      
+      case '2':
+       text = '2';
+         // alert("your number is 2");
+      break;
+      
+     case '3':
+         // alert("your number is 3");
+      text = '3';
+      break; 
+  
+  default:
+  text='your number is not between 1 and 3';
+         // alert("your number is not between 1 and 3");
+  break;
+      // console.log(text)
+  }
+   // console.log(text)
+  document.getElementById('result').innerHTML=text;
+  
+}
+
+document.getElementById('but').addEventListener('click', function(){
+  myFunction();
+});
+  </script>
+</body>
+</html>

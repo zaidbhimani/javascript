@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+     <div>Enter number<input id='demo1' type='text' value=''/></div>
+     <div><input id='but' type='button' value='click'></div>
+     <div id='result'></div>
+  
+  <script type="text/javascript">
+
+  	function myFunction(){
+  var number = document.getElementById('demo1').value;
+  // alert(number);
+  // console.log(number)
+ //  if (number == 1){
+ //    var result = 'The number is accepted';
+ //  }
+  
+ //  else if(number == 2){
+ //    var result = 'The number is accepted';
+ //  }
+  
+ // else if(number == 3){
+ //    var result = 'The number is accepted';
+ //  }
+  
+ //  else{
+ //    var result = 'Your number is not between 1 and 3';
+ //  }
+
+  // document.getElementById('result').innerHTML=result;
+
+                       var text = number == 1 ? "one is selected" : 
+                       number == 2 ? "two is selected" : 
+                       number == 3 ? "three is selected" : "Unknown month number";
+
+                       document.getElementById('result').innerHTML= text;
+  
+}
+
+      document.getElementById('but').addEventListener('click', function(){
+          myFunction();
+       });
+
+  </script>
+</body>
+</html>
