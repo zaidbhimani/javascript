@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div><input id='demo1' type='text' value=''/></div>
+  <div><input id='demo2' type='text' value=''/></div>
+  <div><input id='demo3' type='text' value=''/></div>
+  <div><input id='but' type='button' value='click'></div>
+ 
+  <script type="text/javascript">
+  	function myFunction(){
+ var number1 = parseInt(document.getElementById('demo1').value);
+  var number2 = parseInt(document.getElementById('demo2').value);
+  var added = (number1 + number2);
+  console.log(added)
+  document.getElementById('demo3').value= added;
+  
+  if(isNaN(number1)){
+    alert("Plz enter number");
+  }
+ 
+}
+
+document.getElementById('but').addEventListener('click', function(){
+  myFunction();
+});
+
+
+  </script>
+</body>
+</html>
