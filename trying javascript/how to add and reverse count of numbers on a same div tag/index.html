@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input id='but1' type='button' value='add'/>
+<input id='but2' type='button' value='reverse'/>
+<div id='result'></div>
+<script type="text/javascript">
+	
+	var text=0;
+
+function myFunction(){
+  text = text + 1;
+  document.getElementById('result').innerHTML=text;
+}
+
+
+function myFunction1(){
+	if (text > 0 ){
+  text = text - 1;
+}
+
+else{
+ text = 0;  
+}
+  document.getElementById('result').innerHTML=text;
+
+}
+
+document.getElementById('but2').addEventListener('click', function(){
+  myFunction1();
+  
+});
+
+document.getElementById('but1').addEventListener('click', function(){
+  myFunction();
+  
+});
+
+</script>
+</body>
+</html>

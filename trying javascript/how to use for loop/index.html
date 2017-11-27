@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+     <div>Enter number<input id='demo1' type='text' value=''/></div>
+     <div><input id='but' type='button' value='click'></div>
+     <div id='result'></div>
+
+<script type="text/javascript">
+
+function myFunction(){
+  
+  var number = document.getElementById('demo1').value;
+
+  var i;
+  var text = 'Your number are:-' + '</br>';
+
+  // for (i=0;i<=number;i=i+2){      if you want to increment by 2 then i=i+2
+  	for (i=0;i<=number;i=i+2){
+    text += i  + '</br>'; 
+     console.log(i)
+      }
+
+   document.getElementById('result').innerHTML= text;
+// console.log(text)
+}	
+
+ document.getElementById('but').addEventListener('click', function(){
+     myFunction();
+ });
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id='result'></div>
+
+<script type="text/javascript">
+	
+	var person = {
+		firstName:'zaid',
+		lastName:'bhimani',
+		age:'24'
+	}
+
+var text = '';
+var i;
+
+	for (i in person){
+     text += person[i] + '</br>';
+	}
+
+	document.getElementById('result').innerHTML=text;
+
+</script>
+</body>
+</html>
