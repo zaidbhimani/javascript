@@ -4,32 +4,56 @@
 	<title></title>
 </head>
 <body>
-	<div id='demo'></div>
+
+<div><input id='next' value='change' type='button'/><input id='like-but' value='like' type='button'/><input id='unlike-but' value='unlike' type='button'/></div>
+<div id='store-cars'></div>
+<h4>Likes for cars</h4>
+<div id='store-likes'></div>
+
 <script type="text/javascript">
-	var x;
-	var text = '';
-var person = [
-{
-	firtsName:'zaid',
-	img:'/assests/australia.jpg',
-},
-{
-	firtsName:'shoaib',
-	img:'/assests/australia.jpg',
-}
 
-]
+var cars = ['BMW','ZEN','MERCEDES','JAGUAR','PAJERO']
 
-function myFunction(){
-	document.write(person.firtsName);
+var indexNum = 0;
+var likecontainer = 0;
 
-}
-// for (x in person){
-// 	text += person[x] + '</br>';
-// }
-myFunction();
+  document.getElementById('next').addEventListener('click', function(){
+  document.getElementById('store-cars').innerHTML=cars[indexNum];
+  indexNum++;
+    
+    if( indexNum == 5 ){ 
+    indexNum = 0;
+  }  
+    
+    if( likecontainer > 0 ){
+    likecontainer = 0;  
+    }
+    
+  // if( indexNum == 5 ){
+  //   indexNum = 0;
+  // }  
+    
+  });
 
-document.getElementById('demo').innerHTML=text;
+// var likecontainer = 0;
+
+document.getElementById('like-but').addEventListener('click', function(){
+  document.getElementById('store-likes').innerHTML=likecontainer;
+  likecontainer++;
+  // if( indexNum == 5 ){
+  //   indexNum = 0;
+  // }  
+});
+
+document.getElementById('unlike-but').addEventListener('click', function(){
+  document.getElementById('store-likes').innerHTML=likecontainer;
+  likecontainer--;
+  // if( indexNum == 5 ){
+  //   indexNum = 0;
+  // }  
+});
+
+
 
 </script>
 </body>
