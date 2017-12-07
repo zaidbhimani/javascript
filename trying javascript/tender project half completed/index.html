@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<button class='change'>change</button>
+<div class='resultDiv'>
+	<img src = ''/>
+</div>
+<div class="resultDiv1"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+var cars = [
+  {
+  	image:'bmw.jpg',
+    name:'mercedes',
+    class:'c'
+},
+  {
+  	image:'mercedes.jpg',
+    name:'bmw',
+    class:'b'
+  },
+  {
+  	image:'jaguar.jpg',
+    name:'jaguar',
+    class:'a'
+  }
+]
+// var $div = $('.resultDiv > img');
+var $div = $('.resultDiv > img');
+
+var result = '';
+var indexNum = 0;
+$('.change').on('click', function(){
+  // result = $div.attr('src', cars[indexNum].image)+'</br>'
+  //           +'Name:-' + cars[indexNum].name + '</br>' + 'Class:-' + cars[indexNum].class;
+            // console.log(c)
+  //                result = $div.append("<img src="+cars[indexNum].image+"/>")+'</br>'
+  //           +'Name:-' + cars[indexNum].name + '</br>' + 'Class:-' + cars[indexNum].class;
+  //           console.log(result)
+  // indexNum++;
+  // if(indexNum == 3){
+  //   indexNum = 0;
+  // }
+$div.attr('src', cars[indexNum].image);
+ result = 'Name:-' + cars[indexNum].name + '</br>' + 'Class:-' + cars[indexNum].class;
+
+   indexNum++;
+ if(indexNum == 3){
+    indexNum = 0;
+  }
+ // console.log(result);
+
+  $('.resultDiv1').html(result);
+});
+  
+});
+</script>
+</body>
+</html>
