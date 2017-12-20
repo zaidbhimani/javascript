@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	// function addition(firstNum,secondNum){
+     
+ //     var text = 'Result is:- '
+ //     function adding(){
+ //      return text + (firstNum + secondNum);
+ //     }
+ //     return adding()
+ //  }
+
+ //  var display = addition(10,20);
+ //  document.write(display)
+
+
+  function addition(firstNum,secondNum){
+     
+     var text = 'Result is:- '
+     function adding(){
+      return text + (firstNum + secondNum);
+     }
+     //HERE WE ARE RETURNING THE EXPRESSION OF THE INSIDE FUNCTION WITHOUT                                            EXECUTING..  NOW THE  EXPRESSION BELONGS TO MAIN FUNCTION
+     return adding                                                                                        
+}
+  var display = addition(10,20)();
+  document.write(display)
+
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<div><input id='next' value='change' type='button'/><input id='like-but' value='like' type='button'/><input id='unlike-but' value='unlike' type='button'/></div>
+<div><input id='next' value='change' type='button'/><input id='like-but' value='like' type='button'/><input id='unlike-but' value='unlike' type='button'/></div><span id='display-likes'></span>
 <div id='store-cars'></div>
 <h4>Likes for cars</h4>
 <div id='store-likes'></div>
@@ -16,7 +16,7 @@ var cars = ['BMW','ZEN','MERCEDES','JAGUAR','PAJERO']
 
 var indexNum = 0;
 var likecontainer = 0;
-
+ // var displaycontainer = document.getElementById('store-likes').innerHTML=likecontainer;
   document.getElementById('next').addEventListener('click', function(){
   document.getElementById('store-cars').innerHTML=cars[indexNum];
   indexNum++;
@@ -25,20 +25,27 @@ var likecontainer = 0;
     indexNum = 0;
   }  
     
-    if( likecontainer > 0 ){
-    likecontainer = 0;  
-    }
+
+    // if( likecontainer > 0 ){
+    // likecontainer = 0;  
+    // }
     
   // if( indexNum == 5 ){
   //   indexNum = 0;
   // }  
-    
+  //   if( likecontainer == 0 ){
+  //   likecontainer = 0;
+  // }  
+ document.getElementById('store-likes').innerHTML= 0;
+ // document.getElementById('display-likes').innerHTML= displaycontainer;
   });
 
 // var likecontainer = 0;
 
 document.getElementById('like-but').addEventListener('click', function(){
-  document.getElementById('store-likes').innerHTML=likecontainer;
+   document.getElementById('store-likes').innerHTML=likecontainer;
+   // document.getElementById('display-likes').innerHTML= displaycontainer;
+  // console.log(displaycontainer)
   likecontainer++;
   // if( indexNum == 5 ){
   //   indexNum = 0;
@@ -48,9 +55,9 @@ document.getElementById('like-but').addEventListener('click', function(){
 document.getElementById('unlike-but').addEventListener('click', function(){
   document.getElementById('store-likes').innerHTML=likecontainer;
   likecontainer--;
-  // if( indexNum == 5 ){
-  //   indexNum = 0;
-  // }  
+  if( likecontainer <= 0 ){
+    likecontainer = 0;
+  }  
 });
 
 
