@@ -23,41 +23,43 @@ var indexNum = 0;
 
 var indexNum2 = 0;
 
-// var result = 'Name:-' + imagebox[indexNum].name +'</br>'+'age:-' + imagebox[indexNum].age;
 var result = '';
 var result2 = '';
 
 document.getElementById('divResult').addEventListener('click', function(){
-// console.log(result)
-   result = 'Name:-' + imagebox[indexNum].name +'</br>'+'age:-' + imagebox[indexNum].age;
+   
+    if (indexNum == indexNum2){
     indexNum++;
-   // $('#divResulttwo').html(result);
-
-    if( indexNum > 4){
-    	alert('')
-    	// result = '';
-    	// var zaid = '';
-    	// $('#divResulttwo').html(zaid);
+     result = 'Name:-' + imagebox[indexNum].name +'</br>'+'age:-' + imagebox[indexNum].age;
+       $('#divResulttwo').html(result);
+   }
+    else if( indexNum < 4){
+    result = 'Name:-' + imagebox[indexNum].name +'</br>'+'age:-' + imagebox[indexNum].age;
+     $('#divResulttwo').html(result);
+    indexNum++;
     }
 
    else{
-	   $('#divResulttwo').html(result);
-     }
-   // indexNum++;
-    console.log('indexNum',indexNum)
-  
+      result = '';
+      $('#divResulttwo').html(result);
+   }
 
 });
 
 document.getElementById('divResulttwo').addEventListener('click', function(){
-result2 = 'Name:-' + imagebox[indexNum2].name +'</br>'+'age:-' + imagebox[indexNum2].age;
+    if( indexNum2 < 4){
+     result2 = 'Name:-' + imagebox[indexNum2].name +'</br>'+'age:-' + imagebox[indexNum2].age;
    $('#divResult').html(result2);
     indexNum2++;
-    // if(indexNum2 > 3){
-    
-    // 	$('#divResult').html('');
-    // }
-    console.log('indexNum2',indexNum2)
+  }
+  else{
+     result2 = '';
+      $('#divResult').html(result2);
+  }
+   //  if(indexNum == indexNum2){
+   //  indexNum2++;
+   // }
+
 });
 
 

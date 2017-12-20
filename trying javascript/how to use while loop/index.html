@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div>Enter number<input id='demo1' type='text' value=''/></div>
+     <div><input id='but' type='button' value='click'></div>
+     <div id='result'></div>
+<script>
+    function myFunction(){
+var number = document.getElementById('demo1').value;
+var start= 0;
+// var result='';
+
+while(start <= number){
+    document.write(start);
+    start = start + 1;
+}
+
+}
+
+
+document.getElementById('but').addEventListener('click',function(){
+    myFunction();
+})
+
+</script>
+</body>
+</html>
