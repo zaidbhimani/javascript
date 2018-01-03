@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .active{
+            text-decoration:line-through;
+            /*color:red;*/
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
+</head>
+
+<body>
+   <div class="container">
+    <form id="addTodo">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Add Todo</label>
+            <input type="text" class="form-control" placeholder="Enter Todo" val=''>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+   
+    <ul class="list-group">
+   
+    </ul>
+</div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    
+    <script id='listitemtemplate' type="text/x-handlebars-template">
+    <li class="content">
+     <div class='list-item' id={{id}}>
+      <span>{{text}}</span>
+      <button class="delete">delete</button>
+      <button class="edit">edit</button>
+     </div>
+   </li>
+    </script>
+
+    <script id='newlistitemtemplate' type="text/x-handlebars-template">
+     <div class='new-list-item' id={{id}}>
+      <input type="text" value={{text}} name="" >
+      <button class="save">save</button>
+     </div>
+    </script>
+
+    <script src="custom.js"></script>
+</body>
+
+</html>

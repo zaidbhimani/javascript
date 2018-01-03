@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .resultDiv{
+      width:8vw;
+      height:7vw;
+    }
+    .resultDiv img{
+      width:100%;
+      height:100%;
+    }
+  </style>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-md-6">
+<button class='change'>change</button><button class="like-button">like</button>
+<button class="delete-button">delete</button>
+<div class='resultDiv'>
+	<img src = ''/>
+   <!-- <div class="name"></div>
+    <div class="classic"></div>
+  <div class="likes"></div> --> 
+</div>
+<div class="resultDiv1">
+</div>
+  <span></span>
+</div>
+<div class="col-md-6">
+ <!-- <div class="new-post-wrapper" id=''> --> 
+ <!-- <form> -->
+  <!-- <img class="post-image" src ="hummer.jpg" /> -->
+  <input class="post-name" type="text" value="" placeholder="car-name" />
+  <input class="post-cartype" type="text" value="" placeholder="car-type"/>
+  <!-- <input type="text" value="" placeholder="car-name"> -->
+  <button class="add-new-car" type="submit">add</button>
+ <div><input class="post-image" type="text" val='' placeholder="car-url"/></div>
+ <!-- </form> -->
+  
+</div>
+
+</div><!--end of col-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./custom.js"></script>
+<!-- <script>
+	$(document).ready(function(){
+     
+    var URL = "http://localhost:3000/todos";
+
+window.cars = [
+  {
+      "id":0,
+    "image":"bmw.jpg",
+    "name":"mercedes",
+    "carclass":"c",
+    "likes":0
+},
+  {
+    "id":1,
+    "image":"mercedes.jpg",
+    "name":"bmw",
+    "carclass":"b",
+    "likes":0
+  },
+  {
+    "id":2,
+    "image":"jaguar.jpg",
+    "name":"jaguar",
+    "carclass":"a",
+    "likes":0
+  },
+]
+// var $div = $('.resultDiv > img');
+var $div = $('.resultDiv > img');
+
+var result = '';
+var indexNum = -1;
+// var likestorage = 0;
+$('.change').on('click', function(){
+  indexNum++;
+ if(indexNum == 3){
+    indexNum = 0;
+  }
+ 
+$div.attr('src', cars[indexNum].image);
+ 
+ result = 'Name:-' + cars[indexNum].name + '</br>' + 'Class:-' + cars[indexNum].class;
+ $('span').html(cars[indexNum].likes);
+ $('.resultDiv1').html(result);
+
+
+});//end of change event
+
+$('.like-button').on('click', function(){
+// likestorage++;
+ // cars[indexNum].likes += 1;
+// console.log('likecontainer',likecontainer)
+$('span').html(cars[indexNum].likes += 1);
+// $('span').html(cars[indexNum].likes++)
+ $.ajax({
+   url:URL,
+   method:'POST',
+   data:{
+       text:cars[indexNum].likes
+ }
+ }).done(function(value){
+      // console.log(value)
+      text:value.text,
+      id:value.id  
+   })
+
+});
+
+  
+});//main ending
+</script> -->
+</body>
+</html>
