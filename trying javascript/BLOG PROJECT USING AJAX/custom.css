@@ -1,0 +1,62 @@
+        .full-container{
+			width: 80%;
+			margin:auto;
+		}
+
+		.display-container{
+          border: 1px solid black;
+          height:40vw;
+          overflow-y:scroll; 
+		}
+
+		.post-container{
+			border: 1px solid black;
+			padding-bottom: 2vw;
+		}
+
+		h1{
+			text-align: center;
+		}
+		h6{
+			text-align: center;
+		}
+         .input-tag-container{
+         	width: 50%;
+         	margin: auto;
+         }
+         /*.input-tag-container input{
+            width: 100%;
+         }*/
+         .button-wrapper{
+         	width:20%;
+         	margin: auto;
+         }
+
+         ul{
+         	padding: 0px;
+         }
+         
+         .posted-title{
+         	padding-top: 1vw;
+         	padding-bottom: 0.5vw;
+           text-align: center;
+           font-size: 1.5vw;
+         }
+
+         .posted-description{
+          width: 90%;
+          max-height: 3.1vw;
+          overflow-y: hidden;
+          margin: auto;
+          text-align: center;
+          font-size: 1.2vw;
+          padding-bottom: 1.5vw;
+          /*float:left;*/
+         }
+
+         .blog-wrapper span{
+         	/*float:right;*/
+         	color:green;
+          margin-left: 4vw;
+         
+         }
